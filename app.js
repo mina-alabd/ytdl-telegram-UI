@@ -115,7 +115,7 @@ bot.action(/^dl/, async (ctx) => {
 
        
 video.on('end', ()=>{
-         telegram.sendVideo(msg.chat.id, filename)
+         ctx.sendVideo(msg.chat.id, filename)
               /*ctx.reply(`${title} \n
 الملف صالح لمده 48 ساعه \n
 ${size} حجم الملف  \n
