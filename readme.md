@@ -2,6 +2,8 @@
 
 This private bot  download the youtube videos on your server and keep them for 48 hours(default). every authorized user should have a telegram account with username. all the files are downloaded to the **dl** folder and will be remove after 48 hours.
 
+https://heroku.com/deploy
+
 **Requirements**
  1. At least one telegram account with username
  2. A  docker enabled server or Nodejs installed
@@ -37,7 +39,7 @@ services:
 networks:
   network:
 
-https://heroku.com/deploy
+
 
 
 volumes:
