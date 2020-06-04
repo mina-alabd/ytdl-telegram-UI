@@ -18,7 +18,7 @@ const   usernames = process.env.USERNAMES &&
         age = process.env.AGE || 60*60*24*2,
         interval = process.env.INTERVAL || 1000*60*5,
         downloading = []
-const validYoutubeURLs = [`www.youtu.be`,`www.youtube.com`]
+const validYoutubeURLs = [`youtu.be`,`youtube.com`]
 
 const app = express()
 app.use(express.static('dl'))
@@ -46,7 +46,7 @@ bot.on('message', (ctx)=>{
         try{
             const link = url.parse(ctx.message.text)
             if(validYoutubeURLs.includes(link.hostname)){
-                ctx.reply(`please wait fetching info from youtube ...`)
+                ctx.reply(`برجاء الانتظار ...`)
                 youtubedl.getInfo(ctx.message.text, function getInfo (err, info) {
 
                     const formats = info.formats.map(mapInfo).filter(x=> x)
