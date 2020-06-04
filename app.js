@@ -110,7 +110,7 @@ bot.action(/^dl/, async (ctx) => {
         })
 
 
-        return ctx.answerInlineQuery([
+        return ctx.reply([
                 {
                     type: 'voice',  // It's a voice file.
                     id: ctx.update.inline_query.id,    // We reflect the same ID of the request back.
