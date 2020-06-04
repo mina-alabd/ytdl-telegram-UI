@@ -115,7 +115,7 @@ bot.action(/^dl/, async (ctx) => {
        
 video.on('end', ()=>{
 
-ctx.reply({baseURL.href + filename})
+ctx.reply(source: baseURL.href + filename)
          
               /*ctx.reply(`${title} \n
 الملف صالح لمده 48 ساعه \n
