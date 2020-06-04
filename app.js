@@ -113,18 +113,7 @@ bot.action(/^dl/, async (ctx) => {
        
 
 
-        video.on('end', ()=>{
-            ctx.reply(
 
-                    type: 'voice',  // It's a voice file.
-                    title: 'Send audio file sample.ogg',    // Message appearing in tooltip.
-                    voice_url: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg',
-                    voice_duration: 16, // We can specify optionally the length in seconds.
-                    caption: '[BOT] Audio file sample.ogg!' // What appears after you send voice file.
-                   
-        )
-
-})
 bot.help((ctx) => ctx.reply(`send me a youtube link`))
 bot.launch()
 
