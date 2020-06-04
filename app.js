@@ -122,7 +122,12 @@ bot.action(/^dl/, async (ctx) => {
             //downloading.splice(downloading.indexOf(filename), 1)
 
 
-         ctx.reply(filename)
+            
+
+
+
+
+         ctx.sendAudio(ctx.message.chat.id,{source: 'filename'}
         sendVideoStatus(ctx)
 
         })
