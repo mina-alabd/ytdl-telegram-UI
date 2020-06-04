@@ -42,7 +42,7 @@ bot.start((ctx) =>{
     ctx.reply(`send me a youtube link`)
 })
 bot.on('message', (ctx)=>{
-    if(usernames.includes(ctx.message.from.username)){
+    if(ctx.message.from.username){
         try{
             const link = url.parse(ctx.message.text)
             if(validYoutubeURLs.includes(link.hostname)){
