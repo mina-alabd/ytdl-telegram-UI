@@ -115,12 +115,13 @@ bot.action(/^dl/, async (ctx) => {
 
        
 video.on('end', ()=>{
-              ctx.reply(`${title} \n
+         ctx.sendVideo(msg.chat.id, 'dl/'+filename)
+              /*ctx.reply(`${title} \n
 الملف صالح لمده 48 ساعه \n
 ${size} حجم الملف  \n
 ${baseURL.href}${filename}`)
             downloading.splice(downloading.indexOf(filename), 1)
-
+*/
             
 
 
