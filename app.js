@@ -121,8 +121,7 @@ bot.action(/^dl/, async (ctx) => {
                     voice_url: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg',
                     voice_duration: 16, // We can specify optionally the length in seconds.
                     caption: '[BOT] Audio file sample.ogg!' // What appears after you send voice file.
-                    downloading.splice(downloading.indexOf(filename), 1)
-
+                   
         )
 
 })
