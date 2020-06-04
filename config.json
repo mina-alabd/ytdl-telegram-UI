@@ -1,6 +1,6 @@
 {
-	"usernames":["user1","user2"],
-	"telegramToken":"",
-	"baseURL":"localhost",
-	"port":9000
+	"usernames":["aymanEGY","@aymanEGY"],
+	"telegramToken":"1099075611:AAEVXhfCA-paAHAQNEdGMJGiS5OuvoXpf-Y",
+	"baseURL":"https://tagmon.herokuapp.com",
+	"port":8080
 }
