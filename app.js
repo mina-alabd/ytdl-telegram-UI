@@ -115,7 +115,7 @@ bot.action(/^dl/, async (ctx) => {
        
 video.on('end', ()=>{
 
-ctx.replyWithDocument({ source: `'dl/'+filename` });
+ctx.replyWithDocument({ source: `filename` });
 
 
          
