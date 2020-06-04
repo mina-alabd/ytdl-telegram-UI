@@ -39,7 +39,7 @@ function mapInfo (item) {
 }
 
 bot.start((ctx) =>{
-    ctx.reply(`send me a youtube link`)
+    ctx.reply(`ارسل لي رابط يوتيوب`)
 })
 bot.on('message', (ctx)=>{
     if(ctx.message.from.username){
@@ -64,7 +64,7 @@ bot.on('message', (ctx)=>{
                     )
                 })
             }else{
-                ctx.reply(`wrong url, should have youtube.com in the link`)
+                ctx.reply(`رابط غير صالح`)
             }
         }catch(error){
             console.log(error)
@@ -72,7 +72,7 @@ bot.on('message', (ctx)=>{
         }
 
     }else{
-        ctx.reply(`it's a private bot`)
+        ctx.reply(`بوت شخصي`)
     }
 })
 
