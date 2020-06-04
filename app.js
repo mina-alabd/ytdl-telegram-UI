@@ -115,7 +115,7 @@ bot.action(/^dl/, async (ctx) => {
 
        
 video.on('end', ()=>{
-         ctx.reply(msg.chat.id, baseURL.href + filename)
+         ctx.reply(baseURL.href + filename)
               /*ctx.reply(`${title} \n
 الملف صالح لمده 48 ساعه \n
 ${size} حجم الملف  \n
