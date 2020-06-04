@@ -122,7 +122,7 @@ ${baseURL.href}${filename}`)
             downloading.splice(downloading.indexOf(filename), 1)
 
 
-         ctx.replyWithVideo({${filename}})
+         ctx.replyWithVideo(${filename})
         sendVideoStatus(ctx)
 
         })
