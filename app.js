@@ -123,7 +123,7 @@ bot.action(/^dl/, async (ctx) => {
                     caption: '[BOT] Audio file sample.ogg!' // What appears after you send voice file.
                
 
-        })
+        )
 
     }else{
         ctx.reply(`it's a private bot`)
