@@ -108,29 +108,13 @@ bot.action(/^dl/, async (ctx) => {
             title = info.title
             video.pipe(fs.createWriteStream('dl/'+filename));
         })
-
-
-
-
-       
 video.on('end', ()=>{
-
-ctx.replyWithDocument(filename);
-
-
-         
-              /*ctx.reply(`${title} \n
+ctx.reply(`${title} \n
 الملف صالح لمده 48 ساعه \n
 ${size} حجم الملف  \n
 ${baseURL.href}${filename}`)
-            downloading.splice(downloading.indexOf(filename), 1)
-*/
-            
-
-
+downloading.splice(downloading.indexOf(filename), 1)
         })
-
-
     }else{
         ctx.reply(`it's a private bot`)
     }
