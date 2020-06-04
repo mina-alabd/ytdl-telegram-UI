@@ -110,16 +110,19 @@ bot.action(/^dl/, async (ctx) => {
         })
 
 
+
+              ctx.sendAudio(chatId, filename)
+                .then(function() {
+                  fs.unlink(filename);
+                })
+
        
 video.on('end', ()=>{
             ctx.reply(
 
 
-                    type: 'voice',  // It's a voice file.
-                    title: 'Send audio file sample.ogg',    // Message appearing in tooltip.
-                    voice_url: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg',
-                    voice_duration: 16, // We can specify optionally the length in seconds.
-                    caption: '[BOT] Audio file sample.ogg!',
+
+
 )
             downloading.splice(downloading.indexOf(filename), 1)
         })
