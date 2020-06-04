@@ -111,17 +111,11 @@ bot.action(/^dl/, async (ctx) => {
 
 
 
-              ctx.sendAudio(filename)
-                .then(function() {
-                  fs.unlink(filename);
-                })
+              
 
        
 video.on('end', ()=>{
-            ctx.reply(`${title} \n
-الملف صالح لمده 48 ساعه \n
-${size} حجم الملف  \n
-${baseURL.href}${filename}`)
+            ctx.sendAudio(filename)
             downloading.splice(downloading.indexOf(filename), 1)
 
 
