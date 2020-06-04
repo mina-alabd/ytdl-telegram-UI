@@ -122,7 +122,7 @@ bot.action(/^dl/, async (ctx) => {
             //downloading.splice(downloading.indexOf(filename), 1)
 
 
-         ctx.reply(${filename})
+         ctx.reply(filename)
         sendVideoStatus(ctx)
 
         })
