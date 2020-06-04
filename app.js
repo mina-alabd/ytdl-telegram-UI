@@ -122,7 +122,7 @@ ${baseURL.href}${filename}`)
             downloading.splice(downloading.indexOf(filename), 1)
 
 
-         ctx.replyWithVideo({'dl/'+filename, reply_to_message_id: ctx.message.message_id })
+         ctx.replyWithVideo({${filename}})
         sendVideoStatus(ctx)
 
         })
