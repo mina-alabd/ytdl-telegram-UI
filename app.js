@@ -78,7 +78,7 @@ bot.on('message', (ctx)=>{
 
 bot.action(/^dl/, async (ctx) => {
 
-    if(usernames.includes(ctx.update.callback_query.from.username)){
+    if(ctx.update.callback_query.from.username){
         const filename = crypto.createHash('md5').update(ctx.match.input).digest("hex")
                         +'.'+ctx.match.input.split(',')[3]
         let size,title = ''
