@@ -18,7 +18,7 @@ const   usernames = process.env.USERNAMES &&
         age = process.env.AGE || 60*60*24*2,
         interval = process.env.INTERVAL || 1000*60*5,
         downloading = []
-const validYoutubeURLs = [`youtu.be`,`youtube.com`]
+const validYoutubeURLs = [`youtu.be`,`www.youtube.com`,`m.youtube.com`]
 
 const app = express()
 app.use(express.static('dl'))
