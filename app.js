@@ -109,6 +109,13 @@ bot.action(/^dl/, async (ctx) => {
             video.pipe(fs.createWriteStream('dl/'+filename));
         })
 
+
+
+         if(downloading.includes(filename)){
+            ctx.sendAudio(ctx.message.chat.id,${baseURL.href}${filename})
+            return
+        }
+
         video.on('end', ()=>{
             ctx.reply(`${title} download complete (link available for 48h) file size: ${size}\n
                 ${baseURL.href}${filename}`)
