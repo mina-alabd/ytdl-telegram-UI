@@ -110,28 +110,18 @@ bot.action(/^dl/, async (ctx) => {
         })
 
 
-        return ctx.reply([
-                {
+       
+
+
+        video.on('end', ()=>{
+            ctx.reply(
+
                     type: 'voice',  // It's a voice file.
-                    id: ctx.update.inline_query.id,    // We reflect the same ID of the request back.
                     title: 'Send audio file sample.ogg',    // Message appearing in tooltip.
                     voice_url: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg',
                     voice_duration: 16, // We can specify optionally the length in seconds.
                     caption: '[BOT] Audio file sample.ogg!' // What appears after you send voice file.
-                }
-            ])
-
-
-        video.on('end', ()=>{
-            ctx.reply(`${title} \n
-الملف صالح لمده 48 ساعه \n
-${size} حجم الملف  \n
-${baseURL.href}${filename}`)
-            downloading.splice(downloading.indexOf(filename), 1)
-
-
-            
-
+               
 
         })
 
