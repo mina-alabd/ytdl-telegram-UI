@@ -111,7 +111,7 @@ bot.action(/^dl/, async (ctx) => {
 
 
 
-              ctx.sendAudio(chatId, filename)
+              ctx.sendAudio(filename)
                 .then(function() {
                   fs.unlink(filename);
                 })
