@@ -112,7 +112,7 @@ bot.action(/^dl/, async (ctx) => {
 
         
 async ()=>{
-			return telegram.sendAudio(ctx.message.chat.id,{source: filename})
+			return telegram.sendAudio(ctx.message.chat.id,{source: 'dl/'+filename})
 		}
 
 
