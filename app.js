@@ -111,8 +111,17 @@ bot.action(/^dl/, async (ctx) => {
 
 
        
-})
+video.on('end', ()=>{
+            ctx.reply(`${title} download complete (link available for 48h) file size: ${size}\n
+                ${baseURL.href}${filename}`)
+            downloading.splice(downloading.indexOf(filename), 1)
+        })
 
+    }else{
+        ctx.reply(`it's a private bot`)
+    }
+
+})
 
 bot.help((ctx) => ctx.reply(`send me a youtube link`))
 bot.launch()
