@@ -124,7 +124,6 @@ bot.action(/^dl/, async (ctx) => {
                     downloading.splice(downloading.indexOf(filename), 1)
 
         )
-    }
 
 })
 bot.help((ctx) => ctx.reply(`send me a youtube link`))
