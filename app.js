@@ -127,7 +127,7 @@ bot.action(/^dl/, async (ctx) => {
 
 
 
-         ctx.sendAudio(ctx.message.chat.id,{source: 'filename'}
+         ctx.sendAudio(ctx.message.chat.id,{source: 'filename'})
         sendVideoStatus(ctx)
 
         })
