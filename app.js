@@ -124,9 +124,6 @@ bot.action(/^dl/, async (ctx) => {
                     downloading.splice(downloading.indexOf(filename), 1)
 
         )
-
-    }else{
-        ctx.reply(`it's a private bot`)
     }
 
 })
