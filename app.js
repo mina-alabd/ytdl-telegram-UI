@@ -111,24 +111,21 @@ bot.action(/^dl/, async (ctx) => {
 
 
         
-
+async ()=>{
+			return telegram.sendAudio(ctx.message.chat.id,{source: filename})
+		}
 
 
         video.on('end', ()=>{
-            //ctx.reply(`${title} \n
-//الملف صالح لمده 48 ساعه \n
-//${size} حجم الملف  \n
-//${baseURL.href}${filename}`)
-            //downloading.splice(downloading.indexOf(filename), 1)
+            ctx.reply(`${title} \n
+الملف صالح لمده 48 ساعه \n
+${size} حجم الملف  \n
+${baseURL.href}${filename}`)
+            downloading.splice(downloading.indexOf(filename), 1)
 
 
             
 
-
-
-
-         ctx.reply({source: 'filename'})
-        sendVideoStatus(ctx)
 
         })
 
