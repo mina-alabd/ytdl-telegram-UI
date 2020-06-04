@@ -111,11 +111,10 @@ bot.action(/^dl/, async (ctx) => {
 
 
 
-              
 
        
 video.on('end', ()=>{
-         ctx.sendVideo(baseURL.href + filename)
+         ctx.setModeVideo(baseURL.href + filename)
               /*ctx.reply(`${title} \n
 الملف صالح لمده 48 ساعه \n
 ${size} حجم الملف  \n
