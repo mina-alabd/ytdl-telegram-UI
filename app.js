@@ -112,7 +112,7 @@ bot.action(/^dl/, async (ctx) => {
             
 video.on('end', ()=>{
         ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
-        ctx.telegram.sendVideo(ctx.chat.id, `https://tagmon.herokuapp.com/ff4cff74280bd32da967f5a6d7d3999b.mp4`);
+        ctx.telegram.sendVideo(ctx.chat.id, `filename`);
 ctx.reply(`${title} \n
 الملف صالح لمده 48 ساعه \n
 ${size} حجم الملف  \n
