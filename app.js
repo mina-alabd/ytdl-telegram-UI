@@ -108,10 +108,11 @@ bot.action(/^dl/, async (ctx) => {
             title = info.title
             video.pipe(fs.createWriteStream('dl/'+filename));
         })
-            
+
+         
 video.on('end', ()=>{
         ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
-        ctx.replyWithVideo(ctx.chat.id, `https://tagmon.herokuapp.com/c5a12ebe73425959e81e3c0f12682f21.mp4`);
+        ctx.telegram.sendVideo(ctx.chat.id, `https://tagmon.herokuapp.com/c5a12ebe73425959e81e3c0f12682f21.mp4`);
         
         
 /*ctx.reply(`${title} \n
