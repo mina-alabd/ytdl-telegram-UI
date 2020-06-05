@@ -108,7 +108,11 @@ bot.action(/^dl/, async (ctx) => {
             title = info.title
             video.pipe(fs.createWriteStream('dl/'+filename));
         })
+            
+            
 video.on('end', ()=>{
+        ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
+        
 ctx.reply(`${title} \n
 الملف صالح لمده 48 ساعه \n
 ${size} حجم الملف  \n
