@@ -115,9 +115,9 @@ video.on('end', ()=>{
         
         
         
-    ctx.replyWithVideo({
+    ctx.replyWithVideo(
       url: 'https://tagmon.herokuapp.com/c5a12ebe73425959e81e3c0f12682f21.mp4'
-    })
+    )
 
         
 /*ctx.reply(`${title} \n
