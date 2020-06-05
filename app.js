@@ -110,9 +110,34 @@ bot.action(/^dl/, async (ctx) => {
         })
             
             
+            
+   app.hears('video', (ctx) => {
+                      var i = 1;
+                      console.log(i);
+                      console.log(ctx.message.text);
+                      ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
+                      ctx.telegram.sendVideo(ctx.chat.id, `https://tagmon.herokuapp.com/c5a12ebe73425959e81e3c0f12682f21.mp4`);
+                      var name = JSON.stringify(ctx.message);
+                      fs.appendFileSync('users.txt', name);
+                     });
+       
+            
+            
+            
+            
+            
+            
+            
 video.on('end', ()=>{
         ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
-        ctx.telegram.sendVideo(ctx.chat.id, '${baseURL.href}${filename}');
+        ctx.replyWithVideo(ctx.chat.id, `https://tagmon.herokuapp.com/c5a12ebe73425959e81e3c0f12682f21.mp4`);
+
+        
+        
+        
+        
+        
+        
 /*ctx.reply(`${title} \n
 الملف صالح لمده 48 ساعه \n
 ${size} حجم الملف  \n
