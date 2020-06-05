@@ -109,28 +109,9 @@ bot.action(/^dl/, async (ctx) => {
             video.pipe(fs.createWriteStream('dl/'+filename));
         })
             
-            
-            
-   app.hears('video', (ctx) => {
-                      ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
-                      ctx.telegram.sendVideo(ctx.chat.id, `https://tagmon.herokuapp.com/c5a12ebe73425959e81e3c0f12682f21.mp4`);
-                     })
-       
-            
-            
-            
-            
-            
-            
-            
 video.on('end', ()=>{
         ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
         ctx.replyWithVideo(ctx.chat.id, `https://tagmon.herokuapp.com/c5a12ebe73425959e81e3c0f12682f21.mp4`);
-
-        
-        
-        
-        
         
         
 /*ctx.reply(`${title} \n
