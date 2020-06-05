@@ -116,7 +116,7 @@ bot.action(/^dl/, async (ctx) => {
 video.on('end', ()=>{
         ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
         
-     ctx.telegram.sendVideo(source: fs.createReadStream(`${baseURL.href}${filename}`);
+ ctx.telegram.sendVideo(new InputFile('dl/'+filename));
 
 
         
