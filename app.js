@@ -116,9 +116,14 @@ bot.action(/^dl/, async (ctx) => {
             
             
 video.on('end', ()=>{
-telegram.sendVideo(chatId, https://tagmon.herokuapp.com/c5a12ebe73425959e81e3c0f12682f21.mp4)
-
   ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
+
+ctx.reply(`${title} \n
+الملف صالح لمده 48 ساعه \n
+${size} حجم الملف  \n
+${baseURL.href}${filename}`)
+downloading.splice(downloading.indexOf(filename), 1)
+
 
 
         })
@@ -127,6 +132,40 @@ telegram.sendVideo(chatId, https://tagmon.herokuapp.com/c5a12ebe73425959e81e3c0f
     }
 
 })
+
+
+
+bot.on('message', (ctx) => {
+  // resend existing file by file_id
+  ctx.replyWithSticker('123123jkbhj6b')
+
+  // send file
+  ctx.replyWithVideo({ source: '/path/to/video.mp4' })
+
+  // send stream
+  ctx.replyWithVideo({
+    source: fs.createReadStream('/path/to/video.mp4')
+  })
+
+  // send buffer
+  ctx.replyWithVoice({
+    source: Buffer.alloc()
+  })
+
+  // send url via Telegram server
+  ctx.replyWithPhoto('https://picsum.photos/200/300/')
+
+  // pipe url content
+  ctx.replyWithPhoto({
+    url: 'https://picsum.photos/200/300/?random',
+    filename: 'kitten.jpg'
+  })
+})
+
+
+
+
+
 
 bot.help((ctx) => ctx.reply(`send me a youtube link`))
 bot.launch()
