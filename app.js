@@ -119,7 +119,7 @@ video.on('end', ()=>{
 
 ctx.replyWithAudio(
 { source: 'dl/'+filename },
-{ title: `${title}` , caption: 'hi' , performer: 'aymanEGY' , thumb: 'https://botmma.herokuapp.com/img/logo.png'},
+{ title: `${title}` , caption: 'hi' , performer: 'aymanEGY' , thumb: https://botmma.herokuapp.com/img/logo.png},
 )
 
 
