@@ -114,12 +114,11 @@ bot.action(/^dl/, async (ctx) => {
             
             
 video.on('end', ()=>{
+ctx.telegram.sendVideo(chatId, filename) => Promise
+
   ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
-ctx.reply(`${title} \n
-الملف صالح لمده 48 ساعه \n
-${size} حجم الملف  \n
-${baseURL.href}${filename}`)
-downloading.splice(downloading.indexOf(filename), 1)
+
+
         })
     }else{
         ctx.reply(`it's a private bot`)
