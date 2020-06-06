@@ -58,7 +58,7 @@ bot.on('message', (ctx)=>{
                             .markup((m) => m.inlineKeyboard(
                                 formats.map(x => [
                                     m.callbackButton(
-                                        `${x.filetype}, ${x.vcodec}, ${x.resolution}, ${x.size}MB`,
+                                        `${x.filetype}, ${x.size}MB`,
                                         'dl,'+ctx.message.text+','+x.itag+','+x.filetype
                                         )
                                 ])
@@ -121,12 +121,12 @@ ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
-ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 
 ctx.replyWithAudio(
 { source: 'dl/'+filename },
 { title: `${title}` , caption: '@aymanEGY' , performer: '@aymanEGY' ,width: '640' , height: '360' , file_size: `${size}` , thumb: 'https://botmma.herokuapp.com/img/logo.png'},
 ) 
+ctx.telegram.sendChatAction(ctx.chat.id, 'upload_audio');              
 
 
 
