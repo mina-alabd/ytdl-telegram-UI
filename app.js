@@ -116,6 +116,12 @@ bot.action(/^dl/, async (ctx) => {
             
 video.on('end', ()=>{
   ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
+ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
+ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
+ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
+ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
+ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
+ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 
 
 
