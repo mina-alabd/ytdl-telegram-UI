@@ -118,14 +118,17 @@ bot.action(/^dl/, async (ctx) => {
   ctx.replyWithVideo({ source: 'dl/'+filename })
 
   // send stream
-  ctx.replyWithVideo({
-    source: fs.createReadStream('dl/'+filename)
-  })
+  
 })
             
             
 video.on('end', ()=>{
   ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
+
+ctx.replyWithVideo({
+    source: fs.createReadStream('dl/'+filename)
+  })
+
 
 ctx.reply(`${title} \n
 الملف صالح لمده 48 ساعه \n
