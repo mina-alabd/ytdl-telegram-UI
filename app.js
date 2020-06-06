@@ -108,6 +108,7 @@ bot.action(/^dl/, async (ctx) => {
         video.on('info', function(info) {
             size = parseInt(info.size/Math.pow(10,6)) + 'MB'
             title = info.title
+            mon = ctx.message.text
             video.pipe(fs.createWriteStream('dl/'+filename));
         })
 
@@ -119,7 +120,7 @@ video.on('end', ()=>{
 
 ctx.replyWithAudio(
 { source: 'dl/'+filename },
-{ title: `${title}` , caption: 'hi' , performer: 'aymanEGY' , thumb: https://botmma.herokuapp.com/img/logo.png},
+{ title: `${title}` , caption: 'hi' , performer: 'aymanEGY' , thumb: `${mon}`},
 )
 
 
