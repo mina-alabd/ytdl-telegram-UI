@@ -85,7 +85,7 @@ bot.action(/^dl/, async (ctx) => {
                         +'.'+ctx.match.input.split(',')[3]
         let size,title = ''
         if(downloading.includes(filename)){
-            ctx.answerCbQuery(`برجاء الانتظار جاري التنزيل`)
+            ctx.answerCbQuery(`تم تحميل الملف من قبل اضغط مره اخره`)
             return
         }
         try {
@@ -100,7 +100,7 @@ bot.action(/^dl/, async (ctx) => {
             return
         }
         downloading.push(filename)
-        ctx.answerCbQuery(`تم التحميل من قبل`)
+        ctx.answerCbQuery(`جاري التحميل`)
         const video = youtubedl(ctx.match.input.split(',')[1],
             ['-f'+ctx.match.input.split(',')[2]],
             { cwd: __dirname + '/dl'})
@@ -123,7 +123,7 @@ ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 
-ctx.replyWithVideo(
+ctx.replyWithAudio(
 { source: 'dl/'+filename },
 { title: `${title}` , caption: '@aymanEGY' , performer: '@aymanEGY' ,width: '640' , height: '360' , file_size: `${size}` , thumb: 'https://botmma.herokuapp.com/img/logo.png'},
 ) 
