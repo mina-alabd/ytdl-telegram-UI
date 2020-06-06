@@ -38,9 +38,10 @@ function mapInfo (item) {
     }
 }
 
-bot.start((ctx) =>{
-    ctx.reply(`ارسل لي رابط يوتيوب`)
-})
+//bot.start((ctx) =>{ctx.reply(`ارسل لي رابط يوتيوب`)})
+bot.start((ctx) => ctx.reply('Welcome'))
+
+
 bot.on('message', (ctx)=>{
     if(ctx.message.from.username){
         try{
@@ -114,7 +115,7 @@ bot.action(/^dl/, async (ctx) => {
             
             
 video.on('end', ()=>{
-ctx.telegram.sendVideo(chatId, filename)
+telegram.sendVideo(chatId, filename)
 
   ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 
