@@ -85,7 +85,7 @@ bot.action(/^dl/, async (ctx) => {
                         +'.'+ctx.match.input.split(',')[3]
         let size,title = ''
         if(downloading.includes(filename)){
-            ctx.answerCbQuery(`Please wait, downloading`)
+            ctx.answerCbQuery(`برجاء الانتظار جاري التنزيل`)
             return
         }
         try {
@@ -100,7 +100,7 @@ bot.action(/^dl/, async (ctx) => {
             return
         }
         downloading.push(filename)
-        ctx.answerCbQuery(`Download starts`)
+        ctx.answerCbQuery(`تم التحميل من قبل`)
         const video = youtubedl(ctx.match.input.split(',')[1],
             ['-f'+ctx.match.input.split(',')[2]],
             { cwd: __dirname + '/dl'})
@@ -119,7 +119,7 @@ video.on('end', ()=>{
 
 ctx.replyWithAudio(
 { source: 'dl/'+filename },
-{ title: `${title}` , caption: 'hi' , performer: 'aymanEGY' , thumb: `https://botmma.herokuapp.com/img/logo.png`},
+{ title: `${title}` , caption: '@aymanEGY' , performer: '@aymanEGY'},
 )
 
 
