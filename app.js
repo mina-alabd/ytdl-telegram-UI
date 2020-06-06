@@ -112,18 +112,13 @@ bot.action(/^dl/, async (ctx) => {
         })
 
          
-            bot.on('message', (ctx) => {
-  
-  // send file
-  ctx.replyWithVideo({ source: 'dl/'+filename })
 
-  // send stream
-  
-})
-            
             
 video.on('end', ()=>{
   ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
+
+ctx.replyWithVideo({ source: 'dl/'+filename })
+
 
 ctx.replyWithVideo({
     source: fs.createReadStream('dl/'+filename)
