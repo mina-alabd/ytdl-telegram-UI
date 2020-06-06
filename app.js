@@ -119,8 +119,7 @@ video.on('end', ()=>{
 
 ctx.replyWithAudio(
 { source: 'dl/'+filename },
-{ title: `${title}` },
-{ caption: 'hi'},
+{ title: `${title}` , caption: 'hi'},
 )
 
 
