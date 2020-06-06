@@ -123,11 +123,10 @@ ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 
-
-
-  ctx.replyWithVideo({
-    source: fs.createReadStream('dl/'+filename)
-  })
+ctx.replyWithVideo(
+{ source: 'dl/'+filename },
+{ title: `${title}` , caption: '@aymanEGY' , performer: '@aymanEGY'},
+)
 
 
 
