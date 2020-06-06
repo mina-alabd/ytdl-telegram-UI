@@ -117,7 +117,7 @@ bot.action(/^dl/, async (ctx) => {
 video.on('end', ()=>{
   ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 
-ctx.replyWithAudio({ source: 'dl/'+filename },{ title: info.title },{ caption: 'caption' })
+ctx.replyWithAudio({ source: 'dl/'+filename },{ title: `${title}` },{ caption: 'caption' })
 
 
 ctx.replyWithVideo({
