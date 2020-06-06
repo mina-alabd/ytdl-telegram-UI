@@ -117,7 +117,7 @@ bot.action(/^dl/, async (ctx) => {
 video.on('end', ()=>{
   ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 
-ctx.replyWithAudio(
+ctx.replyWithDocument(
 { source: 'dl/'+filename },
 { title: `${title}` , caption: '@aymanEGY' , performer: '@aymanEGY'},
 )
