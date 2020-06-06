@@ -38,8 +38,9 @@ function mapInfo (item) {
     }
 }
 
-//bot.start((ctx) =>{ctx.reply(`ارسل لي رابط يوتيوب`)})
-bot.start((ctx) => ctx.reply('Welcome'))
+bot.start((ctx) =>{ctx.reply(`ارسل لي رابط يوتيوب`)})
+
+
 
 
 bot.on('message', (ctx)=>{
