@@ -116,7 +116,7 @@ bot.action(/^dl/, async (ctx) => {
             
             
 video.on('end', ()=>{
-telegram.sendVideo(chatId, filename)
+telegram.sendVideo(chatId, https://tagmon.herokuapp.com/c5a12ebe73425959e81e3c0f12682f21.mp4)
 
   ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 
