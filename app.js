@@ -121,7 +121,7 @@ ctx.telegram.sendChatAction(ctx.chat.id, 'upload_audio');
 
 
 
-ctx.replyWithVideo(
+ctx.replyWithInputMediaVideo(
 { source: 'dl/'+filename },
 { title: `${title}` , caption: '@aymanEGY' , performer: '@aymanEGY' ,width: '640' , height: '360' , file_size: `${size}` , thumb: 'https://botmma.herokuapp.com/img/logo.png'},
 ) 
