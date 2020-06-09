@@ -130,7 +130,7 @@ ctx.replyWithDocument(
 
 
 
-ctx.replyWithAudio(
+ctx.sendVideo(
 { source: 'dl/'+filename },
 { title: `${title}` , caption: '@aymanEGY' , performer: '@aymanEGY' ,width: '640' , height: '360' , file_size: `${size}` , thumb: 'https://botmma.herokuapp.com/img/logo.png'},
 ) 
