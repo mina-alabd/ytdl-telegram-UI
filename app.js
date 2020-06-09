@@ -121,9 +121,15 @@ ctx.telegram.sendChatAction(ctx.chat.id, 'upload_audio');
 
 
 
-ctx.replyWithInputMediaVideo(
+
+
+
+
+
+
+ctx.replyWithVideo(
 { source: 'dl/'+filename },
-{ title: `${title}` , caption: '@aymanEGY' , performer: '@aymanEGY' ,width: '640' , height: '360' , file_size: `${size}` , thumb: 'https://botmma.herokuapp.com/img/logo.png'},
+{ title: `${title}` , type: '.mp4' , supports_streaming: 'boolean' , caption: '@aymanEGY' , performer: '@aymanEGY' ,width: '640' , height: '360' , file_size: `${size}` , thumb: 'https://botmma.herokuapp.com/img/logo.png'},
 ) 
 
 
