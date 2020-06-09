@@ -115,14 +115,9 @@ bot.action(/^dl/, async (ctx) => {
 
             
 video.on('end', ()=>{
-  ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
-ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
-ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
-ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
-ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
-
-
+sleep(2)
+ctx.telegram.sendChatAction(ctx.chat.id, 'upload_audio');              
 
 
 
@@ -130,7 +125,6 @@ ctx.replyWithVideo(
 { source: 'dl/'+filename },
 { title: `${title}` , caption: '@aymanEGY' , performer: '@aymanEGY' ,width: '640' , height: '360' , file_size: `${size}` , thumb: 'https://botmma.herokuapp.com/img/logo.png'},
 ) 
-ctx.telegram.sendChatAction(ctx.chat.id, 'upload_audio');              
 
 
 ctx.reply(`${title} \n
