@@ -122,15 +122,11 @@ ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
 
-ctx.replyWithDocument(
-{ source: 'dl/'+filename },
-{ title: `${title}` , caption: '@aymanEGY' , performer: '@aymanEGY'},
-)
 
 
 
 
-ctx.sendVideo(
+ctx.replyWithVideo(
 { source: 'dl/'+filename },
 { title: `${title}` , caption: '@aymanEGY' , performer: '@aymanEGY' ,width: '640' , height: '360' , file_size: `${size}` , thumb: 'https://botmma.herokuapp.com/img/logo.png'},
 ) 
