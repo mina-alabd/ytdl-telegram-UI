@@ -116,7 +116,7 @@ bot.action(/^dl/, async (ctx) => {
             
 video.on('end', ()=>{
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_video');              
-sleep(2)
+
 ctx.telegram.sendChatAction(ctx.chat.id, 'upload_audio');              
 
 
